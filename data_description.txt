@@ -1,0 +1,31 @@
+# Data Description
+
+This repository contains two main files:
+
+1. **PK05.xlsx**  
+   This Excel file includes all raw field measurements of chlorophyll-a and dissolved oxygen, along with five-band reflectance data for each sampling point.  
+   - Data is collected across six sampling periods (months).  
+   - Each month is indicated both by color-coding and a dedicated column labeled `month`.  
+   - Fields include:  
+     - `Chl-a` (µg/L)  
+     - `DO` (mg/L)  
+     - `band1` to `band5` (reflectance values)  
+     - `month` (sampling month name)
+
+2. **DO_estimate.py**  
+   This Python script implements the optimal prediction model (Random Forest) for estimating chlorophyll-a and dissolved oxygen concentrations.  
+   - It reads the input data from `PK05.xlsx`  
+   - Trains and validates the model  
+   - Generates spatial distribution maps of predictions
+
+   Required Python packages:
+   - `pandas`, `numpy`, `scikit-learn`, `os`，`gdal`
+
+3. **Remote Sensing Images**  
+   Due to the large file size, the original remote sensing image data is hosted on Baidu Cloud Drive:  
+   🔗 https://pan.baidu.com/s/1LKuVopY7zG0uEeDU50ue6g?pwd=1234  
+   - This archive contains raw images of the aquaculture site for each sampling month.
+
+---
+
+If you have any questions regarding the data or code, please contact the authors.
